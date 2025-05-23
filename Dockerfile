@@ -8,11 +8,11 @@ FROM debian:bookworm
 
 MAINTAINER Hirokazu MORIKAWA <morikw2@gmail.com>
 
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND = noninteractive
 ADD debian.sources /etc/apt/sources.list.d/
 
 ## FIX - RPC failed; curl 56 GnuTLS recv error (-110)
-ENV GIT_VERSION 2.39.2
+ENV GIT_VERSION = 2.39.2
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
